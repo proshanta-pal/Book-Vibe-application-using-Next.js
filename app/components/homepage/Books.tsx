@@ -31,7 +31,7 @@ export default async function page() {
                 <Link href='/books'>
                     <button className=" text-green-500 border-2 rounded-full font-medium py-2 px-5 cursor-pointer hover:bg-green-500 hover:text-white transition-all">See more</button>
                 </Link>
-            </div>
+        </div>
     </section>
   )
 }

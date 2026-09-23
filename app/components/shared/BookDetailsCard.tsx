@@ -1,6 +1,8 @@
 import { IBook } from '@/app/types/book.type'
 import Image from 'next/image'
 import React from 'react'
+import ReadBooksButton from '../bookDetails/ReadBooksButton';
+import WishlistButton from '../bookDetails/WishlistButton';
 
 interface BookDetailsCardProps {
     book: IBook;
@@ -18,13 +20,13 @@ export default function BookDetailsCard({book}: BookDetailsCardProps) {
             <div className='flex gap-3'>
                 <span className="badge badge-primary badge-outline">
                     {book.category}
-                    </span>
+                </span>
 
-                    {book.tags.map((tag) => (
-                        <span key={tag} className="badge badge-ghost">
-                            #{tag}
-                        </span>
-                    ))}
+                {book.tags.map((tag) => (
+                    <span key={tag} className="badge badge-ghost">
+                        #{tag}
+                    </span>
+                ))}
             </div>
 
 
@@ -65,8 +67,8 @@ export default function BookDetailsCard({book}: BookDetailsCardProps) {
             </div>
 
             <div className="card-actions justify-end">
-                <button className="btn btn-primary">Read</button>
-                <button className="btn btn-primary">Wishlist</button>
+                <ReadBooksButton book={book}/>
+                <WishlistButton book={book}/>
             </div>
         </div>
     </div>

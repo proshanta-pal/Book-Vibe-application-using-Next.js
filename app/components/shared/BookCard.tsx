@@ -12,7 +12,7 @@ export default function BookCard({book}: BookCardProps) {
         <div className='relative h-72'>
             <Image 
             src={book.image} alt={book.bookName} width={800} height={600} 
-            className='h-full w-full object-cover transition-all delay-500 group-hover:scale-105'/>
+            className='h-full w-full object-cover transition-all rounded-2xl delay-500 group-hover:scale-105'/>
 
             <span className='absolute left-5 top-5 rounded-3xl bg-white/80 px-3 backdrop-blur'>
                 {book.category}
